@@ -13,15 +13,15 @@ export const Router = () => {
         path='/home'
         render={({ match: { url } }) => (
           <Switch>
-            {homeRoutes.map((route) => {
+            {homeRoutes.map((route) => (
               <Route
                 key={route.path}
                 exact={route.exact}
                 path={`${url}${route.path}`}
               >
                 {route.children}
-              </Route>;
-            })}
+              </Route>
+            ))}
           </Switch>
         )}
       />
